@@ -7,10 +7,10 @@ class MyHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         SimpleHTTPServer.SimpleHTTPRequestHandler.end_headers(self)
 
     def send_my_headers(self):
-        # Cache for 2 DAYS
+        # Cache
         self.send_header("cache-control", "public, max-age=290304000")
-        self.send_header("expires", "Fri, 18 Jan 2016 19:39:13 GMT")
-        # self.send_header("Last-Modified", "Fri, 18 Jan 2016 19:39:13 GMT")
+        self.send_header("expires", "Fri, 18 Jan 2017 19:39:13 GMT")
+        self.send_header("Last-Modified", "Mon, 11 Jan 2016 19:28:38 GMT")
 
         # No Cahce
         # self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
